@@ -4,6 +4,7 @@ var hora = data.getHours();
 var minutos = data.getMinutes();
 var r = document.getElementById("msg");
 var img = document.getElementById("imagem");
+ nome=window.prompt("Qual é o seu nome?");
 if (hora >= 0 && hora < 12) {
         bom = "Bom dia!";
     img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMHPK6vvtkwJvIsEUIruS1rss36sYdwGQU3g&s";
@@ -18,8 +19,8 @@ if (hora >= 0 && hora < 12) {
     bom = "Boa noite!";
     img.src = "https://i.pinimg.com/736x/2a/52/a3/2a52a39806e84a502db951cf9e0488d5.jpg";
     document.body.style.background = "#123a56";
-}
-   r.innerHTML = ` Agora são ${hora}:${minutos},${bom}!`;
+    }
+    r.innerHTML = `Olá, ${nome}! Agora são ${hora}:${minutos},${bom}!`;
    r.appendChild(img);
    r.style.textAlign = "center";
 } 
